@@ -1,0 +1,29 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLActor</id><coordinates><x>297</x><y>45</y><w>54</w><h>99</h></coordinates><panel_attributes>학생</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>126</y><w>27</w><h>720</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;780</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>513</x><y>108</y><w>90</w><h>27</h></coordinates><panel_attributes>시대평 시스템</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>738</x><y>108</y><w>90</w><h>27</h></coordinates><panel_attributes>데이터베이스</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>549</x><y>126</y><w>27</w><h>720</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;780</additional_attributes></element><element><id>Relation</id><coordinates><x>774</x><y>126</y><w>27</w><h>720</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;780</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>180</y><w>261</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+1. 부서 목록 요청(모집중 필터 적용)</panel_attributes><additional_attributes>270;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>549</x><y>234</y><w>252</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+2. 모집중인 부서 목록 조회</panel_attributes><additional_attributes>260;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>549</x><y>297</y><w>252</w><h>36</h></coordinates><panel_attributes>lt=&lt;..
+2.1 모집중인 부서 목록 반환</panel_attributes><additional_attributes>10;20;260;20</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>360</y><w>261</w><h>36</h></coordinates><panel_attributes>lt=&lt;..
+2.2 모집중인 부서 목록 표시</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>297</x><y>396</y><w>531</w><h>396</h></coordinates><panel_attributes>opt
+--
+[filter == '최신순']
+
+
+
+
+
+
+
+
+
+
+
+
+-.
+[filter == '평점순']</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>459</y><w>261</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+3. 부서 목록 요청(최신순 필터 적용)</panel_attributes><additional_attributes>270;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>549</x><y>486</y><w>252</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+2. 부서 목록 조회</panel_attributes><additional_attributes>260;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>549</x><y>540</y><w>252</w><h>36</h></coordinates><panel_attributes>lt=&lt;..
+2.1 최신순으로 정렬하여 부서 목록 반환</panel_attributes><additional_attributes>10;20;260;20</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>567</y><w>261</w><h>36</h></coordinates><panel_attributes>lt=&lt;..
+2.2 최신순 부서 목록 표시</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>639</y><w>261</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+3. 부서 목록 요청(평점순 필터 적용)</panel_attributes><additional_attributes>270;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>549</x><y>666</y><w>252</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+2. 부서 목록 조회</panel_attributes><additional_attributes>260;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>549</x><y>711</y><w>252</w><h>36</h></coordinates><panel_attributes>lt=&lt;..
+2.1 평점순으로 정렬하여 부서 목록 반환</panel_attributes><additional_attributes>10;20;260;20</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>747</y><w>261</w><h>36</h></coordinates><panel_attributes>lt=&lt;..
+2.2 평점순 부서 목록 표시</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>207</x><y>27</y><w>684</w><h>837</h></coordinates><panel_attributes>부서 목록 열람</panel_attributes><additional_attributes></additional_attributes></element></diagram>
