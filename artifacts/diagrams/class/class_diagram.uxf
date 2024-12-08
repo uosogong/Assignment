@@ -33,12 +33,11 @@
       <x>260</x>
       <y>300</y>
       <w>130</w>
-      <h>130</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>Student
 --
 - schedule : char
-- studentId : int
 --
 + updateProfile()
 + resume()
@@ -52,7 +51,7 @@
       <x>530</x>
       <y>300</y>
       <w>170</w>
-      <h>120</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Staff
 --
@@ -69,15 +68,18 @@
     <coordinates>
       <x>600</x>
       <y>500</y>
-      <w>160</w>
-      <h>130</h>
+      <w>230</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>Department
 --
+- departmentId : int
 - name : char
-- schedule : char
-- recruitment : bool
+- scholarshipRecruitment : bool
+- internRecruitment : bool
 - introduction : char
+- leftDays : int
+- rating : float
 - createdDate : char
 - modifiedDate : char</panel_attributes>
     <additional_attributes/>
@@ -88,10 +90,11 @@
       <x>50</x>
       <y>610</y>
       <w>160</w>
-      <h>100</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Dibs
 --
+- dibsId : int
 - userId : int
 - deparmentId : int
 - createdDate : char
@@ -105,7 +108,7 @@
       <x>570</x>
       <y>750</y>
       <w>160</w>
-      <h>140</h>
+      <h>170</h>
     </coordinates>
     <panel_attributes>Feedback
 --
@@ -113,6 +116,8 @@
 - departmentId : int
 - userId : int
 - description : char
+- busy : char
+- mood : char
 - rating : int
 - createdDate : char
 - modifiedDate : char</panel_attributes>
@@ -123,14 +128,21 @@
     <coordinates>
       <x>230</x>
       <y>760</y>
-      <w>160</w>
-      <h>130</h>
+      <w>210</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>Resume
 --
 - resumeId : int
 - departmentId : int
 - userId : int
+- isScholarshipResume : bool
+- isInternResume : bool
+- address : char
+- workplace : char
+- totalWorkSemester : char
+- otherScholarship : char
+- schedule : char
 - contents : char
 - createdDate : char
 - modifiedDate : char</panel_attributes>
@@ -162,84 +174,98 @@
     <id>Relation</id>
     <coordinates>
       <x>70</x>
-      <y>420</y>
+      <y>410</y>
       <w>220</w>
-      <h>210</h>
+      <h>220</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=*
 부서를 찜한다 v</panel_attributes>
-    <additional_attributes>200.0;10.0;10.0;190.0</additional_attributes>
+    <additional_attributes>200.0;10.0;10.0;200.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>240</x>
-      <y>420</y>
+      <y>410</y>
       <w>170</w>
-      <h>360</h>
+      <h>370</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=*
 부서에 지원한다 v</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;340.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;350.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>660</x>
-      <y>620</y>
-      <w>170</w>
-      <h>150</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=*
-부서에 대한 후기 ^</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;130.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>600</x>
-      <y>410</y>
+      <y>660</y>
       <w>170</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
+m2=*
+부서에 대한 후기 ^</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>420</y>
+      <w>170</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
 m2=1
 부서를 관리한다 v</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;80.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>320</x>
-      <y>620</y>
+      <y>660</y>
       <w>320</w>
-      <h>170</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=*
 부서에 대한 지원 ^</panel_attributes>
-    <additional_attributes>300.0;10.0;220.0;100.0;110.0;130.0;10.0;140.0</additional_attributes>
+    <additional_attributes>300.0;10.0;220.0;60.0;110.0;90.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>350</x>
-      <y>420</y>
+      <y>410</y>
       <w>260</w>
-      <h>350</h>
+      <h>360</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=*
 부서에 후기를 남긴다 v</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;220.0;240.0;330.0</additional_attributes>
+    <additional_attributes>10.0;10.0;70.0;230.0;240.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>420</y>
+      <w>270</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+지원자를 확인한다 v</panel_attributes>
+    <additional_attributes>10.0;340.0;60.0;240.0;250.0;10.0</additional_attributes>
   </element>
 </diagram>
